@@ -1,0 +1,19 @@
+/**
+*settings to be able to connect to local virtualbox VM using putty or winscp
+*/
+
+1. pick a VM->settings->newwork->adapter1
+2.attached to: host-only-adapter(name=virtualbox host-only ethernet adapter)
+3. advanced: promiscuous mode :allow all, checked cable connected
+4. switch to adapter 2
+5. attached to: Bridged Adapter->Realtek PCIe Family Controller
+6. advanced: Promiscuous Mode: allow all
+7. click ok
+8. start VM
+9. check ip with command 'ip addr' or 'ifconfig'
+10. find ip addr like '192.x.x.x'
+11. open putty
+    host name:192.x.x.x
+    port:22
+12. completed
+
